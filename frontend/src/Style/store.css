@@ -1,0 +1,180 @@
+.store {
+    /* display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative; */
+    padding: 20px;
+    /* height: 100vh; */
+    border-radius: 0px 0px 12px 12px;
+    box-shadow: 0 0 20px rgba(154, 154, 154, 0.7), 0 0 40px rgba(89, 89, 89, 0.8), inset 0 0 40px rgba(233, 233, 233, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border for contrast */
+}
+
+.store-nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.store-logo{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.search-bar{
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    width: 300px;
+    
+}
+
+.search-bar::placeholder{
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.search{
+    width: 14px;
+    position: relative;
+    right: 10px;
+}
+.search:hover{
+    filter: invert(1);
+}
+
+.search-button{
+    position: relative;
+    right: 28px;
+    border: none;
+    cursor: pointer;
+}
+.search-button:hover{
+    background-color: transparent;
+}
+
+.cart img{
+    width: 35px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 70vw; /* Adjust width as needed */
+    height: 70vh; /* Set a fixed height for the slideshow container */
+    margin: 50px auto;
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image fits inside the div */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition effect */
+
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .next-button {
+    right: 0;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /*******CARD DETAILS****************/
+  .items-list{
+    display: flex;
+    max-width: 90vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .card{
+    background: rgba(255, 255, 255, 0.3); /* Transparent white */
+    box-shadow: 0 0 20px rgba(185, 177, 177, 0.4), 0 0 40px rgba(255, 255, 255, 0.1), inset 0 0 40px rgba(255,255,255,0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: fit-content;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+  }
+
+  .item-img{
+    width: 20vw;
+  }
+  .item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image fits inside the div */
+  }
+
+  .item-details{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .add-to-cart{
+    background-color: rgb(255, 153, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0 0 0 ;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  .add-to-cart:hover{
+    background-color: rgb(255, 170, 41);
+
+  }
+
+  /*TOAST*/
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin: 0 auto;
+  background-color: #2bd600;
+  color: #000000;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 10px;
+  top: 10px;
+  font-size: 17px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}

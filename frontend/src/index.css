@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  /* background: linear-gradient(135deg, rgba(160, 160, 160, 0.8), rgba(7, 42, 111, 0.8)); */
+  background-color: #f1f1f2;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  /* height: 100vh; */
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.border{
+  text-shadow: /*To apply border to text*/
+        1px 1px 0 #000, /* Right-bottom shadow */
+        -1px -1px 0 #000, /* Left-top shadow */
+        1px -1px 0 #000, /* Right-top shadow */
+        -1px 1px 0 #000; /* Left-bottom shadow */
+}
+
+
+.navbar {
+  width: 97vw;
+  display: flex;
+  flex-direction: row;
+  background-color: #000000;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px 12px 0px 0px;
+  /* border: 0px 10px 0px 10px solid white; */
+  margin: 11px 0px 11px 0px;
+  padding: 0px 10px 0px 10px;
+
+}
+
+footer{
+  height: 10vh;
+  width: 97vw;
+  background-color: black;
+  color: white;
+  position: relative;
+  bottom: 0;
+
+  border-radius: 12px 12px 0px 0px;
+  /* border: 0px 10px 0px 10px solid white; */
+  margin: 11px 0px 0px 0px;
+  padding: 10px;
+}
