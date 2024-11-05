@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
   const { query } = req.body; // Get the user's query from the request body
 
   // Prompt before querying AI
-  const prompt = `. If this query is not related to food, meal plans, health, or nutrition, then just respond with Please ask food or health-related problems only.`;
+  const prompt = `. If this query is not related to food, meal plans, health, nutrition or workout related queries then just respond with Please ask food or health-related problems only.`;
 
   try {
     const response = await fetch(`${gemini_api_url}?key=${gemini_api_key}`, {

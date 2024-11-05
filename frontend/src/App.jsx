@@ -37,7 +37,7 @@ import Footer from './Footer.jsx'
 
 function App() {
   // const { currentUser } = useSelector((state) => state.user);
-  const [currentUser, setCurrentUser] = useState(false);
+  const [currentUser, setCurrentUser] = useState(true);
 
   // Hide the NavBar on login and signup pages
   const hideNavBar = location.pathname === '/login' || location.pathname === '/signup';

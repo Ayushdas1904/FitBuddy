@@ -46,7 +46,7 @@ export default function SignUp({ setLogin }) {
       // console.log(data)
 
       if (response.ok) {
-        alert(`User registered successfully with calorie intake`);
+        alert(`User registered successfully with calorie intake of ${calorieIntake} KCal`);
         setLogin(false); // Set login to false after successful signup
         
       } else {

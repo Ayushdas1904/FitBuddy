@@ -51,16 +51,15 @@ export default function Food() {
 
     setFetchedCalories(totalCalories);
     setMacros({
-      protein: { consumed: parseFloat(totalProtein.toFixed(1)), total: (0.20*totalCalorieIntake).toFixed(1)}, // Adjust 'total' as per the user's daily goal
-      fats: { consumed: parseFloat(totalFats.toFixed(1)), total: (0.30*totalCalorieIntake).toFixed(1)},
-      carbs: { consumed: parseFloat(totalCarbs.toFixed(1)), total: (0.50*totalCalorieIntake).toFixed(1) }
+      protein: { consumed: parseFloat(totalProtein.toFixed(1)), total: (0.05*totalCalorieIntake).toFixed(1)}, // Adjust 'total' as per the user's daily goal
+      fats: { consumed: parseFloat(totalFats.toFixed(1)), total: (0.03*totalCalorieIntake).toFixed(1)},
+      carbs: { consumed: parseFloat(totalCarbs.toFixed(1)), total: (0.125*totalCalorieIntake).toFixed(1) }
     });
   };
 
   const calculatePercentage = (consumed, total) => {
     return (consumed / total) * 100;
   };
-
 
   const rotatePlusButton = () => {
     setPlusRotation(plusRotation + 90);

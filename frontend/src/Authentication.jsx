@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import {Link, useNavigate } from "react-router-dom";
 import LogoImage from "./assets/fitbuddy-logo-black.png";
 import AuthImage from "./assets/fitbuddy-logo-black.png";
 import Login from "./Components/Login.jsx";
@@ -63,6 +64,7 @@ const TextButton = styled.span`
 `;
 
 function Authentication({setCurrentUser}){
+  const navigate = useNavigate();
   const [login, setLogin] = useState(false);
   return (
     <Container>
@@ -73,6 +75,7 @@ function Authentication({setCurrentUser}){
       <Right>
         {!login ? (
           <>
+            
             <Text>
               <h1>Welcome to FitBuddy👋</h1>
               <p>Enter your login details.!</p>
