@@ -86,7 +86,7 @@ export default function Store() {
         const stripe = await stripePromise;
 
         // Call your backend to create the checkout session
-        const response = await fetch('http://localhost:3000/api/stripe', {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/stripe`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

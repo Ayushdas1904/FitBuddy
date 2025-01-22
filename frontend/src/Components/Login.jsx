@@ -23,7 +23,7 @@ export default function Login({ setCurrentUser }) {
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent the form from refreshing the page
     try {
-      const response = await fetch('http://localhost:3000/api/users/login', {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

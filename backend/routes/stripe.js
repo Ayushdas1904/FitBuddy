@@ -28,8 +28,8 @@ router.post('/', async (req, res) => {
                 quantity: 1,
             })),
             mode: 'payment',
-            success_url: 'http://localhost:5173/success',
-            cancel_url: 'http://localhost:5173/cancel',
+            success_url: `${FRONTEND_URL}/success`,
+            cancel_url: `${FRONTEND_URL}/cancel`,
         });
 
         res.json({ id: session.id });

@@ -10,7 +10,7 @@ const Ai = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:3000/api/ai', {
+      const res = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/ai`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

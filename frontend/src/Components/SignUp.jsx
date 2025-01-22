@@ -34,7 +34,7 @@ export default function SignUp({ setLogin }) {
     setCalorieIntake(calorieIntake); // Save calorie intake from CalorieIntake component
 
     try {
-      const response = await fetch('http://localhost:3000/api/users/signup', {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/users/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
