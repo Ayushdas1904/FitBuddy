@@ -2,8 +2,9 @@
 
 FitBuddy is a comprehensive web-based health and fitness application designed to help users track their daily calorie intake, plan meals with the help of AI, purchase health-related products, and connect with a community of fitness enthusiasts.
 
----
+**Vercel Link:** https://fit-buddy-2004.vercel.app/
 
+---
 ## Features
 
 ### 1. **Calorie Tracking**
