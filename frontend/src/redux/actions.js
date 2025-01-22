@@ -1,9 +1,13 @@
 
 const nutritionAppID = import.meta.env.VITE_NUTRITIONIX_APP_ID;
-const nutritionAppKey = import.meta.env.VITE_NUTRITIONIX_API_KEY
-const nutritionInstantURL = "https://trackapi.nutritionix.com/v2/search/instant";
-const nutritionDetailGeneric = "https://trackapi.nutritionix.com/v2/natural/nutrients";
-const nutritionDetailBranded = "https://trackapi.nutritionix.com/v2/search/item";
+const nutritionAppKey = import.meta.env.VITE_NUTRITIONIX_APP_KEY;
+const nutritionInstantURL = "nutritionix/v2/search/instant";
+const nutritionDetailGeneric = "nutritionix/v2/natural/nutrients";
+const nutritionDetailBranded = "nutritionix/v2/search/item";
+
+// console.log("App ID:", nutritionAppID);
+// console.log("App Key:", nutritionAppKey);
+
 
 // Error handling
 const errorHandling = (resJSON) => {

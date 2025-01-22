@@ -1,0 +1,21 @@
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    mix-blend-mode: difference;
+    top: 0;
+    left: 0;
+    z-index: 99999999999;
+
+    background-color: black;
+  }
+  
+  .cursor-circle {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }

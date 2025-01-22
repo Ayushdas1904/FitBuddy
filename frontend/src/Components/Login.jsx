@@ -38,7 +38,8 @@ export default function Login({ setCurrentUser }) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('calorieIntake', data.calorieIntake); // Store calorieIntake
         alert('Login successful!');
-        setCurrentUser(true);
+        localStorage.setItem('currentUser', 'true');
+        setCurrentUser(true); 
         navigate('/home'); // Redirect to home or another page
       } else {
         alert('Login failed: ' + data.message);

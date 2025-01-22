@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Authentication from './Authentication.jsx'
@@ -12,32 +12,27 @@ import Food from "./Components/Food.jsx";
 import Store from "./Components/Store.jsx";
 import MyProfile from "./Components/MyProfile.jsx";
 import Footer from './Footer.jsx'
-
-// function AppWrapper() {
-//   const location = useLocation();
-
-  // // Hide the NavBar on login and signup pages
-  // const hideNavBar = location.pathname === '/login' || location.pathname === '/signup';
-
-//   return (
-//     <>
-//       {!hideNavBar && <NavBar />} {/* Conditionally render NavBar */}
-//       <Routes>
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/signup" element={<SignUp />} />
-//         <Route path="/" element={<Navigate to="/home" />} /> {/* Default redirect to Home */}
-//         <Route path="/home" element={<Home />} />
-//         <Route path="/food" element={<Food />} />
-//         <Route path="/store" element={<Store />} />
-//         <Route path="/profile" element={<MyProfile />} />
-//       </Routes>
-//     </>
-//   );
-// }
+import Cursor from "./Components/Cursor.jsx";
+import Payment from "./Components/Payment.jsx";
+import Success from "./Components/Success.jsx";
+import Cancel from "./Components/Cancel.jsx";
 
 function App() {
-  // const { currentUser } = useSelector((state) => state.user);
-  const [currentUser, setCurrentUser] = useState(true);
+  const [currentUser, setCurrentUser] = useState(() => {
+    const storedUser = localStorage.getItem('currentUser');
+    return storedUser === 'true'; // This will return `true` if the user is logged in
+  });
+
+  useEffect(() => {
+    // Update the currentUser state from localStorage whenever it changes
+    const userStatus = localStorage.getItem('currentUser');
+    if (userStatus === 'true') {
+      setCurrentUser(true);
+    } else {
+      setCurrentUser(false);
+    }
+  }, []);
+
 
   // Hide the NavBar on login and signup pages
   const hideNavBar = location.pathname === '/login' || location.pathname === '/signup';
@@ -50,16 +45,19 @@ function App() {
           {!hideNavBar && <NavBar currentUser={currentUser} />}
           <Routes>
             <Route path="/" element={<Navigate to='/home' />} />
-            <Route path="/profile" exact element={<MyProfile/>} />
+            <Route path="/profile" exact element={<MyProfile setCurrentUser={setCurrentUser}/>} />
             <Route path="/login" exact element={<Login />} />
             <Route path="/signup" exact element={<SignUp/>} />
             <Route path="/ai" exact element={<Ai/>} />
             <Route path="/home" exact element={<Home/>} />
             <Route path="/food" exact element={<Food/>} />
             <Route path="/store" exact element={<Store/>} />
+            <Route path="/success" exact element={<Success/>} />
+            <Route path="/cancel" exact element={<Cancel/>} />
           </Routes>
           {!hideNavBar && <Footer currentUser={currentUser} />}
 
+          <Cursor/>
         </>
       ) : (
         <Authentication setCurrentUser={setCurrentUser} />

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import '../Style/home.css'
 import '../Style/navbar.css'
-import back1 from '../assets/back1.jpg'
-import back3 from '../assets/back3.png'
-import back2 from '../assets/back2.jpg'
+import '../index.css'
+import test from '../assets/test.png'
+import cart from '../assets/cart.png'
+import ai from '../assets/ai_home.png'
 import back4 from '../assets/back4.jpg'
 import logo from '../assets/fitbuddy-logo-black.png'
 
@@ -33,18 +34,28 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    document.body.style.background = `linear-gradient(135deg, rgba(140, 170, 200, 0.9), rgba(7, 42, 111, 0.8))`;
+    document.body.style.background = `linear-gradient(90deg, rgba(23,33,121,1) 22%, rgba(210,41,41,1) 100%)`;
+    // document.body.style.background = `rgba(100, 100, 200, 1)`;
+    document.querySelector(".indicator").style.border = ` 5px solid #172179`;
 
-    // document.body.style.backgroundImage = `url(${back1}) `
-    // document.body.style.backgroundSize = "cover"
-    // document.body.style.backgroundPosition = "center"
-    // document.body.style.backgroundAttachment = "fixed"
-    // document.body.style.backdropFilter = `blur(3px)`
-    // document.querySelector(".indicator").style.border = `5px solid #667270`
+
+    document.querySelector(".navbar").style.position = 'relative';
+    document.querySelector(".navbar").style.left = `19px`;
+
+    document.querySelector("footer").style.position = 'relative';
+    document.querySelector("footer").style.left = `19px`;
+    document.querySelector("footer").style.margin = `0px`;
 
     return () => {
-      document.querySelector(".indicator").style.border = ''
-      document.body.style.backgroundImage = '';
+      document.querySelector(".indicator").style.border = '';
+      document.body.style.background = '';
+
+      document.querySelector(".navbar").style.position = '';
+      document.querySelector(".navbar").style.left = ``;
+
+      document.querySelector("footer").style.position = '';
+      document.querySelector("footer").style.left = ``;
+    document.querySelector("footer").style.margin = ``;
 
     }
   }, [])
@@ -66,14 +77,20 @@ export default function Home() {
       ) : (
         <>
           <div className="intro slide">
+            <div className="title">
             <h1>I am FITBUDDY👋</h1>
             <h5>YOUR PERSONAL HEALTH & FITNESS COMPANION!</h5>
+            </div>
+            <img id='food' src={test} alt="" />
           </div>
           <div className="ai slide">
-            <h1>GET PERSONALISED AI-BASED MEAL PLANS & TIPS!</h1>
+            <div className="title"><h1>GET PERSONALISED AI-BASED MEAL PLANS & TIPS!</h1></div>
+            <img className='invert' id='food' src={ai} alt="" />
           </div>
           <div className="e-commerce slide">
-            <h1>EXPLORE OUR E-COMMERCE SECTION FOR HEALTH & GYM SUPPLEMENTS!</h1>
+          <img id='cart' src={cart} alt="" />
+            <div className='title'><h1>EXPLORE OUR E-COMMERCE SECTION FOR HEALTH & GYM SUPPLEMENTS!</h1></div>
+            
           </div>
         </>
 

@@ -14,10 +14,11 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  /* height: 100vh; */
   padding: 0px;
   margin: 0px;
-  
+
+  /*CHANGING CURSOR ICON*/
+  cursor: url('https://icons.iconarchive.com/icons/bingxueling/fruit-vegetables/256/apple-red-icon.png'), auto;
 }
 
 body::-webkit-scrollbar {
@@ -44,7 +45,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   background-color: #000000;
-  align-items: center;
+  /* align-items: center; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -54,7 +55,7 @@ body::-webkit-scrollbar {
 }
 
 footer{
-  height: 10vh;
+  /* height: 10vh; */
   width: 97vw;
   background-color: black;
   color: white;

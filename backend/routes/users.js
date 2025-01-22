@@ -4,10 +4,13 @@ import User from '../models/users.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt'; // To hash passwords
 import dotenv from 'dotenv'
+// import crypto from 'crypto'
 
 dotenv.config();
 
 const router = express.Router();
+// const secretKey = crypto.randomBytes(64).toString('hex');
+// console.log(secretKey)
 
 // POST /api/signup - Register a new user
 router.post('/signup', async (req, res) => {
@@ -35,7 +38,7 @@ router.post('/signup', async (req, res) => {
     await user.save();
 
     // Create and sign JWT token
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '2h' });
+    const token = jwt.sign({ userId: user._id }, (process.env.JWT_SECRET || secretKey), { expiresIn: '2h' });
 
     // Respond with the token
     res.status(201).json({ message: 'User registered successfully', token });
@@ -70,7 +73,7 @@ router.post('/login', async (req, res) => {
   } catch (err) {
     res.status(500).json({ success: false, message: 'Server error' });
   }
-});
+}); 
 
 
 export default router;

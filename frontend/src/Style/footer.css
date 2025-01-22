@@ -1,0 +1,20 @@
+.foot1{
+    display: flex;
+  justify-content: space-between;
+}
+
+.socials{
+    display: flex;
+    gap: 10px;
+}
+
+.foot2{
+    display: flex;
+    gap: 20px;
+}
+
+.foot2 div{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}

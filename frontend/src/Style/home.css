@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
 
 .home {
     /* width: 100vw; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
     position: relative;
-
+/* 
     text-shadow: 
     2px 1px 0px black,
     -1px -1px 0px black,
     -1px 1px 0px black,
-    1px -1px 0px black;
+    1px -1px 0px black; */
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Anton", sans-serif ;
@@ -23,49 +23,73 @@ h1, h2, h3, h4, h5, h6 {
 
 .slide {
     
-    font-size: 35px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     padding: 50px;
-    width: 97vw;
-    height: 70vh;
-    box-shadow: 0 0 20px rgba(89, 89, 89, 0.7), 0 0 40px rgba(151, 151, 151, 0.8), inset 0 0 40px rgba(233, 233, 233, 0.4);
-    /* border: 2px solid rgba(255, 255, 255, 0.1);  */
+    min-width: 100vw;
+    height: 95vh;
+    /* border: 1px solid rgba(0, 0, 0);  */
 
 }
 
 
 
 .intro {
+    font-size: 40px;
+    
     color: white;
     top: 5vh;
+    position: sticky;
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    z-index: 3;
+}
 
+.title{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;    
+    justify-content: center; 
+}
+
+#food{
+    width: 400px;
+    height: 400px;
 }
 
 .ai {
-  
-    top: 10vh;
+    font-size: 30px;
+
+    background-color: black;
+    top: 0vh;
+    position: sticky;
     color: white;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 4;
 }
 
 .e-commerce {
-    /* position: sticky; */
+    font-size: 30px;
+    background: linear-gradient(90deg, rgba(83,26,140,1) 15%, rgba(15,223,240,1) 100%);
+    position: sticky;
     z-index: 4; 
     top: 15vh;
     color: white;
 
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    gap: 100px;
     align-items: center;
     justify-content: center;
+}
+
+#cart{
+    width: 400px;
+    /* height: 100px; */
 }
 
 

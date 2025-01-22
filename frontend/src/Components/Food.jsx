@@ -28,7 +28,6 @@ export default function Food() {
 
   const [macros, setMacros] = useState({
     protein: { consumed: [], total: [] },
-    // fiber: { consumed: 25, total: 30 },
     fats: { consumed: [], total: [] },
     carbs: { consumed: [], total: [] }
   });
