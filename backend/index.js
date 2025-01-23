@@ -18,10 +18,11 @@ app.use(cors());
 app.use(express.json());  // Parse incoming JSON requests
 
 // Connect to MongoDB (local instance)
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected locally via Compass'))
   .catch((err) => console.log(`MongoDB connection error: ${err}`));
-
+  
 // Routes
 app.use('/api/users', userRoutes);  // Use the user routes
 app.use('/api/ai', aiRoutes);
